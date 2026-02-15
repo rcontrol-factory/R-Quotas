@@ -1,0 +1,34 @@
+We need to fix 3 things. Please do them in this order and do NOT redesign UI yet.
+
+A) RESTORE THE EXISTING CALCULATOR (do not recreate from scratch)
+1) Search the codebase for the existing calculator feature/screens/components (stairs calculator etc).
+2) Confirm the calculator logic/functions are still present.
+3) Re-enable its navigation route and add a visible entry point in the main Carpenter/Finish dashboard (menu/button).
+4) Ensure it appears after login for test users and does not depend on trade combos.
+5) Add a quick smoke test: open app -> dashboard -> tap Calculator -> calculator screen loads.
+
+B) REMOVE OLD COMBO TEST USERS AND CREATE NEW CLEAN TEST USERS
+Goal: We want only 4 generic test logins + 1 houseclean test login.
+1) Identify and delete previously created combo test users such as: wolf*, *roof*, *finishframe*, *rooffinish*, or any user created specifically for "Roof+Finish" / "Finish+Frame".
+   - Delete safely with proper FK handling (delete dependent rows first if needed).
+2) Create these NEW test users (clean, no combos):
+   - Username: test1  Password: test1234
+   - Username: test2  Password: test1234
+   - Username: test3  Password: test1234
+   - Username: test4  Password: test1234
+   - Username: houseclean1 Password: test1234
+3) These accounts must be able to login and then choose trades/services inside onboarding.
+4) Print back to me the final list of usernames created (ONLY usernames; password is the same for all: test1234).
+
+C) ADD "PHOTO ESTIMATE (MVP)" WITHOUT AI (so we can test now)
+1) Add a button in the dashboard: "Photo Estimate (Beta)".
+2) It opens camera or photo picker.
+3) Save the photo linked to the Job/Estimate and show a preview in the Job details.
+4) Allow manual inputs: length/width/height + material selector.
+5) Use existing pricing logic to produce an estimate based on manual inputs (no AI measurement yet).
+6) Must not crash on mobile. Handle permissions gracefully.
+
+After completing A/B/C, tell me:
+- Which files were changed
+- How to access Calculator and Photo Estimate from the UI
+- Confirm test1-test4 and houseclean1 can login.

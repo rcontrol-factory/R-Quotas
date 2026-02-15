@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RQuote (Private)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">RQ</div>
+      <div class="brand-text">
+        <div class="brand-name">RQuote</div>
+        <div class="brand-sub">Private estimator • Offline</div>
+      </div>
+    </div>
+
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab active" data-view="dashboard">Dashboard</button>
+      <button class="tab" data-view="job">New Job</button>
+      <button class="tab" data-view="stairs">Stairs</button>
+      <button class="tab" data-view="settings">Settings</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- DASHBOARD -->
+    <section class="view active" id="view-dashboard">
+      <div class="grid">
+        <div class="card">
+          <h2>Quick Actions</h2>
+          <div class="actions">
+            <button class="btn primary" id="btn-new-job">+ New Job</button>
+            <button class="btn" id="btn-export-pdf">Export PDF (demo)</button>
+          </div>
+          <p class="muted">
+            Next: we will connect real pricing, client info, and PDF generator.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Recent Jobs</h2>
+          <div class="empty" id="jobs-empty">No jobs yet.</div>
+          <ul class="list" id="jobs-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW JOB -->
+    <section class="view" id="view-job">
+      <div class="card">
+        <h2>New Job</h2>
+
+        <div class="form-grid">
+          <label>
+            Client name (private)
+            <input id="clientName" type="text" placeholder="John Smith" />
+          </label>
+
+          <label>
+            Job name
+            <input id="jobName" type="text" placeholder="Baseboards + 5 doors" />
+          </label>
+
+          <label>
+            Address / City (optional)
+            <input id="jobLocation" type="text" placeholder="MA / RI" />
+          </label>
+
+          <label>
+            Notes (private)
+            <textarea id="jobNotes" rows="3" placeholder="Details…"></textarea>
+          </label>
+        </div>
+
+        <hr />
+
+        <h3>Line items (demo)</h3>
+        <div class="line-grid">
+          <label>
+            Category
+            <select id="category">
+              <option>Baseboard</option>
+              <option>Door install</option>
+              <option>Casing</option>
+              <option>Trim</option>
+              <option>Custom</option>
+              <option>Extra detail</option>
+            </select>
+          </label>
+
+          <label>
+            Qty
+            <input id="qty" type="number" min="1" value="1" />
+          </label>
+
+          <label>
+            Unit price (your internal)
+            <input id="unitPrice" type="number" min="0" step="1" value="100" />
+          </label>
+
+          <button class="btn" id="btn-add-item">Add</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th class="right">Qty</th>
+                <th class="right">Unit</th>
+                <th class="right">Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="itemsTbody"></tbody>
+          </table>
+        </div>
+
+        <div class="totals">
+          <div>
+            <div class="muted">Recommended price (client)</div>
+            <div class="big" id="recommendedTotal">$0</div>
+          </div>
+          <div class="actions">
+            <button class="btn primary" id="btn-save-job">Save Job</button>
+            <button class="btn" id="btn-generate-pdf">Generate PDF (demo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAIRS -->
+    <section class="view" id="view-stairs">
+      <div class="card">
+        <h2>Stairs Calculator (wireframe)</h2>
+        <p class="muted">Next: we’ll build total rise / total run / riser count modes.</p>
+
+        <div class="form-grid">
+          <label>
+            Total Rise (inches)
+            <input type="number" id="totalRise" value="108" />
+          </label>
+
+          <label>
+            Target Riser Height (inches)
+            <input type="number" id="riserHeight" value="7.5" step="0.01" />
+          </label>
+
+          <label>
+            Total Run (inches)
+            <input type="number" id="totalRun" value="120" />
+          </label>
+
+          <label>
+            Tread Depth (inches)
+            <input type="number" id="treadDepth" value="10" step="0.01" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" id="btn-calc-stairs">Calculate (demo)</button>
+        </div>
+
+        <div class="result" id="stairsResult">—</div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="view" id="view-settings">
+      <div class="card">
+        <h2>Settings</h2>
+
+        <div class="form-grid">
+          <label>
+            Default tax %
+            <input type="number" id="taxPct" value="0" step="0.1" />
+          </label>
+
+          <label>
+            Your service area (shown on PDF)
+            <input type="text" id="serviceArea" value="Massachusetts & Rhode Island" />
+          </label>
+
+          <label>
+            Output language (client PDF)
+            <select id="pdfLang">
+              <option value="en" selected>English</option>
+              <option value="pt">Português (internal)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" id="btn-save-settings">Save Settings</button>
+        </div>
+
+        <p class="muted">
+          Privacy: this is local-only (browser storage). No server.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    RQuote • offline • private
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

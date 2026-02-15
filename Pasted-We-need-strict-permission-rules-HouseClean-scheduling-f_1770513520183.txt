@@ -1,0 +1,53 @@
+We need strict permission rules + HouseClean scheduling feature. Please implement carefully.
+
+A) SUPPORT PERMISSIONS (ONLY Matheus accounts can edit/support)
+1) Create a role/permission gate for "Support Admin" actions (edit users, reset passwords, create test users, send invites).
+2) ONLY these accounts can have Support Admin permissions:
+   - "Matheus" (main admin profile)
+   - "admin"
+   - "admin@test.com" (admin test)
+   No other user (including Matheus' brother) can edit anything in Support.
+3) All other users can ONLY:
+   - open a support ticket / request help
+   - view their own support requests
+   They must NOT see admin/support tools (no user search, no reset password, no invite creation, no test user creation).
+
+B) OWNER / BOSS can invite employees (by link)
+1) Add a button for business owners/managers: "Invite Employee".
+2) This generates an invite link (token-based, expires configurable e.g. 7 days).
+3) When employee opens invite link:
+   - they complete signup (name/email/password)
+   - they are automatically linked to the owner's company
+4) Owner can see list of employees and enable/disable access.
+
+C) SUPPORT PANEL (Matheus-only) needs "Create test user" + "Generate signup link"
+1) In Support Admin panel (Matheus-only):
+   - Add "Create Test User" action (creates user with a temporary password OR generates a one-time signup link).
+   - Add "Generate Signup Link" action (anyone can use link to register; user chooses their own name/password).
+2) Support Admin can also:
+   - search users by username/email
+   - send password reset link (or force reset)
+   - deactivate/reactivate users
+3) Ensure audit logging for Support Admin actions (who did what, timestamp).
+
+D) HOUSECLEAN: dedicated SCHEDULE page + notifications + Maps deep link
+1) For HouseClean accounts, add a dedicated tab/page: "Schedule".
+2) Schedule view:
+   - Week view + Month view
+   - Each day shows number of houses + list of jobs for that day (time, address, notes)
+3) Owner assigns jobs to employees:
+   - employee receives schedule updates automatically
+4) Notifications:
+   - Send a daily push notification to each employee with tomorrow’s schedule.
+   - Default time = 9:00 PM local time (optionally allow 6:00 PM).
+   - Notification includes: first job time, address summary, and a tap action to open schedule.
+5) Address tap behavior:
+   - Tapping an address opens Maps on the phone.
+   - Prefer Google Maps if installed; fallback to Apple Maps.
+6) Robust mobile behavior: no crashes, handle missing permissions gracefully.
+
+After implementing, report back:
+- Which files changed
+- How to verify Support Admin gating works
+- How to create an employee invite link
+- How to use HouseClean Schedule and confirm notifications + Maps open.

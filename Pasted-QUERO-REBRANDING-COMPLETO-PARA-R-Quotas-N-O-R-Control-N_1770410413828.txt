@@ -1,0 +1,52 @@
+QUERO REBRANDING COMPLETO PARA "R Quotas" (NÃO É R Control / NÃO É RQuote). 
+Objetivo: visual PREMIUM corporativo (dark), verde como acento, zero/ou mínimo dourado (se usar, só micro-detalhe opcional). 
+Eu NÃO consigo editar arquivos manualmente — você tem que fazer as alterações direto nos arquivos.
+
+TAREFAS (ordem):
+
+1) RENOMEAR APP (UI + PDF)
+- Trocar qualquer texto “R Control”, “RQuote”, “R Quote” para “R Quotas”
+- Header/Nav (topo) deve mostrar: "R Quotas"
+- PDF gerado deve ter cabeçalho “R Quotas” (onde hoje aparece R Control / RQuote)
+- Garantir consistência: “R Quotas” (com espaço) em UI, e “RQuotas” apenas se precisar como id/slug interno.
+
+2) PALETA (DARK PREMIUM + VERDE)
+- Aplicar tema dark premium em client/src/index.css usando CSS variables:
+  background: #0B0F0D
+  surface: #111814
+  surface2: #161F19
+  text: #EAF2EC
+  muted: #9FB3A6
+  border: rgba(255,255,255,0.08)
+  primary (verde): #2ECC71 (ou um verde premium equivalente)
+  primary-hover: um tom um pouco mais escuro
+  danger: #E74C3C
+- Remover aparência “site genérico”, aumentar contraste, bordas suaves, cards com sombra leve.
+
+3) LOGO (PROVISÓRIO, SEM DOURADO PESADO)
+- Criar um logo simples (compasso + esquadro minimalista) em SVG/React (sem madeira/dourado)
+- Colocar no canto esquerdo do header ao lado do texto “R Quotas”
+- Logo deve funcionar em dark mode e ficar nítido pequeno (ícone).
+
+4) UI MAIS “APP”
+- Dashboard com cards mais modernos (grid responsivo) + botão “Open Details”
+- Botões com estilo premium: radius 10-12px, padding bom, hover suave
+- Navbar/topbar fixo com usuário (admin) e badge ADMIN já existe — manter, mas deixar bonito.
+- Ajustar tipografia (peso/spacing) para ficar corporativo.
+
+5) BILINGUE (OPCIONAL AGORA, MAS PREPARAR)
+- Deixar estrutura pronta para no futuro ter PT/EN (ex: arquivo simples de strings)
+- Por enquanto deixar labels em inglês (USA).
+
+6) NÃO QUEBRAR LOGIN
+- Manter auth atual (admin / admin123 e user / user123)
+- Rotas protegidas continuam funcionando.
+
+ENTREGÁVEL:
+- Depois de aplicar, rodar o app e confirmar que:
+  a) Header mostra “R Quotas”
+  b) Dashboard está dark premium com verde
+  c) PDF também mostra “R Quotas”
+  d) Não existe mais texto “R Control” nem “RQuote” no app
+
+Pode fazer commit/changes direto e me avisar quando terminar.

@@ -1,0 +1,261 @@
+{
+  "categories": [
+    {
+      "key": "TRIM",
+      "label": {
+        "en": "Trim / Baseboards",
+        "pt": "Rodapé / Moldura"
+      },
+      "items": [
+        {
+          "name": "Baseboard",
+          "unit": "LF",
+          "unitPrice": 6.0,
+          "min": 6.0,
+          "max": 10.0,
+          "notes": ""
+        },
+        {
+          "name": "Crown Molding",
+          "unit": "LF",
+          "unitPrice": 8.0,
+          "min": 8.0,
+          "max": 12.0,
+          "notes": ""
+        },
+        {
+          "name": "Door Casing",
+          "unit": "EA",
+          "unitPrice": 85.0,
+          "min": 85.0,
+          "max": 120.0,
+          "notes": ""
+        },
+        {
+          "name": "Window Casing",
+          "unit": "EA",
+          "unitPrice": 120.0,
+          "min": 120.0,
+          "max": 150.0,
+          "notes": ""
+        },
+        {
+          "name": "Shoe Molding",
+          "unit": "LF",
+          "unitPrice": 3.0,
+          "min": 3.0,
+          "max": 5.0,
+          "notes": ""
+        },
+        {
+          "name": "Caulk & Touch-up",
+          "unit": "JOB",
+          "unitPrice": 150.0,
+          "min": 150.0,
+          "max": 250.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "DOORS",
+      "label": {
+        "en": "Doors",
+        "pt": "Portas"
+      },
+      "items": [
+        {
+          "name": "Door Install (Pre-hung)",
+          "unit": "EA",
+          "unitPrice": 150.0,
+          "min": 150.0,
+          "max": 200.0,
+          "notes": "Install pre-hung interior door"
+        },
+        {
+          "name": "Door Install (Slab only)",
+          "unit": "EA",
+          "unitPrice": 120.0,
+          "min": 120.0,
+          "max": 160.0,
+          "notes": "Install slab door into existing frame"
+        },
+        {
+          "name": "Door Hardware (knob/handle)",
+          "unit": "EA",
+          "unitPrice": 35.0,
+          "min": 35.0,
+          "max": 60.0,
+          "notes": "Install knob/handle + latch"
+        },
+        {
+          "name": "Door Hinge Replace/Adjust",
+          "unit": "EA",
+          "unitPrice": 25.0,
+          "min": 25.0,
+          "max": 45.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "WINDOWS",
+      "label": {
+        "en": "Windows",
+        "pt": "Janelas"
+      },
+      "items": [
+        {
+          "name": "Window Trim Package",
+          "unit": "EA",
+          "unitPrice": 250.0,
+          "min": 220.0,
+          "max": 320.0,
+          "notes": "Includes casing + stool/apron (when applicable)"
+        },
+        {
+          "name": "Window Casing Install",
+          "unit": "EA",
+          "unitPrice": 120.0,
+          "min": 120.0,
+          "max": 150.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "DECK",
+      "label": {
+        "en": "Deck",
+        "pt": "Deck"
+      },
+      "items": [
+        {
+          "name": "Deck Board Install",
+          "unit": "SF",
+          "unitPrice": 8.0,
+          "min": 8.0,
+          "max": 12.0,
+          "notes": ""
+        },
+        {
+          "name": "Deck Stairs (build/repair)",
+          "unit": "EA",
+          "unitPrice": 450.0,
+          "min": 350.0,
+          "max": 650.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "STAIRS",
+      "label": {
+        "en": "Stairs / Handrails",
+        "pt": "Escadas / Corrimão"
+      },
+      "items": [
+        {
+          "name": "Stair Treads Install",
+          "unit": "EA",
+          "unitPrice": 90.0,
+          "min": 70.0,
+          "max": 120.0,
+          "notes": "Per tread"
+        },
+        {
+          "name": "Handrail Install",
+          "unit": "LF",
+          "unitPrice": 35.0,
+          "min": 30.0,
+          "max": 50.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "GARAGE",
+      "label": {
+        "en": "Garage",
+        "pt": "Garagem"
+      },
+      "items": [
+        {
+          "name": "Garage Trim / Finish",
+          "unit": "JOB",
+          "unitPrice": 650.0,
+          "min": 500.0,
+          "max": 900.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "STRUCTURE",
+      "label": {
+        "en": "Structure / Framing",
+        "pt": "Estrutura"
+      },
+      "items": [
+        {
+          "name": "Framing Small Repairs",
+          "unit": "JOB",
+          "unitPrice": 350.0,
+          "min": 250.0,
+          "max": 600.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "EXTRAS",
+      "label": {
+        "en": "Extras",
+        "pt": "Extras"
+      },
+      "items": [
+        {
+          "name": "Travel / Pickup Materials",
+          "unit": "JOB",
+          "unitPrice": 80.0,
+          "min": 50.0,
+          "max": 150.0,
+          "notes": "Used when you need to pick up materials"
+        },
+        {
+          "name": "Protection / Covering",
+          "unit": "JOB",
+          "unitPrice": 120.0,
+          "min": 80.0,
+          "max": 220.0,
+          "notes": "Floor protection, plastic, etc."
+        },
+        {
+          "name": "Demo / Removal (light)",
+          "unit": "JOB",
+          "unitPrice": 150.0,
+          "min": 100.0,
+          "max": 300.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "OTHER",
+      "label": {
+        "en": "Other",
+        "pt": "Outro"
+      },
+      "items": [
+        {
+          "name": "Custom Item (free text)",
+          "unit": "EA",
+          "unitPrice": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "notes": "User types name + qty + price"
+        }
+      ]
+    }
+  ]
+}

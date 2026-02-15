@@ -1,0 +1,104 @@
+You are working on a production-ready web/mobile app called "R Quotas".
+
+GOAL:
+Improve visual design, UX, and first-impression quality without changing business logic, database schema, or authentication flow.
+
+IMPORTANT RULES:
+- DO NOT change database models or migrations
+- DO NOT touch auth logic
+- DO NOT break routing or state management
+- Visual/UI changes only
+- Fix UI bugs that cause screens to close or reload unexpectedly
+
+========================
+1) DASHBOARD / HOME
+========================
+- Redesign the Dashboard hero/capa section
+- Remove white frames and unnecessary borders
+- Use ONE strong background image only (construction / modern home)
+- Reduce visual dominance of framing-only images
+- Add subtle dark overlay or gradient for readability
+- Make Dashboard look like a premium SaaS app
+
+Layout intent:
+- Clean
+- Professional
+- Trustworthy
+- High-end construction software
+
+========================
+2) SERVICE CATEGORY COVERS
+========================
+Replace current covers with correct themed images:
+
+- Carpentry:
+  Use a composite feel:
+  - framing + finished house
+  - interior stairs or trim detail
+  NO music, NO instruments
+
+- Painting:
+  Replace brick-like texture
+  Show:
+  - painted walls
+  - doors, trim, or interior finish
+
+- Tile:
+  Keep kitchen/bathroom tile imagery
+  Slightly cleaner, brighter
+
+- House Cleaning:
+  Clean office or home interior
+  Light, feminine, organized feeling
+
+All covers should:
+- Be visually consistent
+- Use same aspect ratio
+- Have subtle overlay
+- No white borders
+
+========================
+3) LOGO
+========================
+Current logo is too minimal and weak.
+
+Redesign logo conceptually:
+- Still text-based (no heavy illustration)
+- Stronger typography
+- Construction / architecture feel
+- Can reference:
+  - structure
+  - precision
+  - growth
+  - reliability
+
+Do NOT overcomplicate.
+
+========================
+4) UI STABILITY BUG
+========================
+Fix issue where:
+- App opens and immediately closes or reloads
+- After selecting trade (e.g. Carpentry) and pressing Continue, app does not advance
+
+Check:
+- navigation guards
+- missing awaits
+- state not persisting after selection
+- unintended redirects
+
+Fix ONLY the UI/state issue, do not change backend.
+
+========================
+5) GENERAL UI POLISH
+========================
+- Reduce visual noise
+- Improve spacing and hierarchy
+- Make buttons clearer and more confident
+- Improve first-impression "this is a serious app"
+
+FINAL CHECK:
+Ask yourself:
+"Would a contractor trust this app with real jobs?"
+
+If not, refine until yes.
